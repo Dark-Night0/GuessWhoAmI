@@ -1,6 +1,6 @@
-# guessSudo 
+# GuessHowAmI
 
-**guessHowAmI** : It is a guessing tool that attempts to use the current sudo user, to try to access the root user
+**GuessHowAmI** : It is a guessing tool that attempts to use the current sudo user, to try to access the root user
 
 
 ## Features
@@ -14,8 +14,8 @@
 
 
 ## Installation
-Download guessHowAmI by cloning the Git repository:
-<br />```$ git clone https://github.com/Dark-Night0/guessHowAmI.git```
+Download GuessHowAmI by cloning the Git repository:
+<br />```$ git clone https://github.com/Dark-Night0/GuessHowAmI.git```
 <br />```$ chmod +x requirements.sh```
 <br />```$ ./requirements.sh ```
 
@@ -43,3 +43,5 @@ Display Help menu Enter command on terminal
 
  **Twitter** 
 * [0xDARK3](https://twitter.com/0xDARK3)
+
+<br>
