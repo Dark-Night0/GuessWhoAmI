@@ -39,6 +39,9 @@ Display Help menu Enter command on terminal
 
 ## Author
 
+Mohammed Khalid (0xDARK)
+<br />
+
  **Facebook** 
 * [Mohammed Khalid](https://www.facebook.com/profile.php?id=100085121092587)
 
