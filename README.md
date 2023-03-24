@@ -24,6 +24,7 @@ Download GuessHowAmI by cloning the Git repository:
 <br />
 
 ![alt text](.banner.png)
+<br />
 Display Help menu Enter command on terminal 
 <br />```$ python3 guessSudo.py -h```
 <br />
