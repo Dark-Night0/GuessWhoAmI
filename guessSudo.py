@@ -15,6 +15,13 @@ Num_arg = len(sys.argv)
 arg = sys.argv
 fileName = "NewWordList.txt"
 
+def handle_error(type, value, traceback):
+    error = f"{red}good Bay 2>"
+    displaySlow(error)
+    os.remove("error")
+
+sys.excepthook = handle_error
+
 # Disply Slow Words
 def displaySlow(words , date=0.02):
     for char in words:
