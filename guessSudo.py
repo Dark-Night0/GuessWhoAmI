@@ -18,7 +18,9 @@ fileName = "NewWordList.txt"
 def handle_error(type, value, traceback):
     error = f"{red}good Bay 2>"
     displaySlow(error)
-    os.remove("error")
+    if os.path.isfile("error"):
+        os.remove("error")
+    
 
 sys.excepthook = handle_error
 
@@ -216,6 +218,5 @@ def main():
 
 main()
 
-if os.path.isfile("error"):
-    os.remove("error")
+
 
