@@ -15,6 +15,12 @@ Num_arg = len(sys.argv)
 arg = sys.argv
 fileName = "NewWordList.txt"
 
+# Disply Slow Words
+def displaySlow(words ):
+    for char in words:
+        print(char, end='', flush=True)
+        time.sleep(0.02)
+        
 # Display Examples
 def examples():
     exam = f'''{nc}
@@ -33,12 +39,10 @@ options:
 
     '''
 
-    for char in exam:
-        print(char, end='', flush=True)
-        time.sleep(0.01)
+    DisplaySlow(exam)
 
 
-# Display Panner
+# Display banner
 def banner():
 
     banner =  f'''{green}               . .IIIII
@@ -89,10 +93,8 @@ def Download(url1):
 def massageCheck():
     massage = f'''\n{red}Important alert:
   {blue}The account may be closed if you meet certain conditions 
-  set by the Root of this system .. Continue [y/n] ? : {nc}'''
-    for char in massage:
-        print(char, end='', flush=True)
-        time.sleep(0.02)
+  set by the Root of this system .. Continue [{green}y{nc}/{red}n{blue}] ? : {nc}'''
+    DisplaySlow(massage)
     check= input("")
     return check
 
@@ -116,9 +118,7 @@ def DisplayDetails():
     {green}Numbers Cores: {blue}{Num_Cores}{nc}
     '''
 
-    for char in text:
-        print(char, end='', flush=True)
-        time.sleep(0.01)
+    DisplaySlow(text)
 
 
 # Return Number Lines Files
@@ -128,11 +128,6 @@ def NumLines(name_file):
     lines = file.readlines()
 
     return len(lines)
-
-def displaySlow(words):
-    for char in words:
-        print(char, end='', flush=True)
-        time.sleep(0.02)
 
 
 # The Function guessing
