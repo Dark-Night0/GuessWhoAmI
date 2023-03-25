@@ -16,7 +16,7 @@ arg = sys.argv
 fileName = "NewWordList.txt"
 
 def handle_error(type, value, traceback):
-    error = f"{red}good Bay 2>"
+    error = f"\n{red}good Bay :)"
     displaySlow(error)
     if os.path.isfile("error"):
         os.remove("error")
