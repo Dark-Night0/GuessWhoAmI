@@ -16,10 +16,10 @@ arg = sys.argv
 fileName = "NewWordList.txt"
 
 # Disply Slow Words
-def displaySlow(words ):
+def displaySlow(words , date=0.02):
     for char in words:
         print(char, end='', flush=True)
-        time.sleep(0.02)
+        time.sleep(date)
         
 # Display Examples
 def examples():
@@ -39,7 +39,7 @@ options:
 
     '''
 
-    DisplaySlow(exam)
+    displaySlow(exam , 0.02)
 
 
 # Display banner
@@ -63,9 +63,7 @@ def banner():
             I                                       
     {nc}'''
     print(banner)
-    # for char in panner:
-    #     print(char, end='', flush=True)
-    #     time.sleep(0.01)
+    # displaySlow(banner , 0.01)
 
 
 # Help Menu
@@ -94,7 +92,7 @@ def massageCheck():
     massage = f'''\n{red}Important alert:
   {blue}The account may be closed if you meet certain conditions 
   set by the Root of this system .. Continue [{green}y{nc}/{red}n{blue}] ? : {nc}'''
-    DisplaySlow(massage)
+    displaySlow(massage)
     check= input("")
     return check
 
@@ -118,7 +116,7 @@ def DisplayDetails():
     {green}Numbers Cores: {blue}{Num_Cores}{nc}
     '''
 
-    DisplaySlow(text)
+    displaySlow(text)
 
 
 # Return Number Lines Files
