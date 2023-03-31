@@ -149,7 +149,7 @@ def Guess(word):
             for i in WordList:
                 word = ''.join(i)
                 os.system("sudo -k")
-                status = os.popen(f"echo {word} | sudo -S ls /root/ 2> error").read()
+                status = os.popen(f"echo {word} | sudo -S ls -la /root/ 2> error").read()
                 if (len(status) == 0):
                     failed = f"{red}Failed Password {green}{glines} {nc}| {blue}{slines}: {red}{word}\n"
                     displaySlow(failed)
