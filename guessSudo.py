@@ -1,4 +1,4 @@
-import sys , os , requests , argparse , time , platform 
+import sys , os , requests , argparse , time , platform , chardet
 from multiprocessing import cpu_count
 
 # Colors
@@ -16,7 +16,7 @@ arg = sys.argv
 fileName = "NewWordList.txt"
 
 def handle_error(type, value, traceback):
-    error = f"\n{red}good Bay :)"
+    error = f"\n{red}Error !! , good Bay :)"
     displaySlow(error)
     if os.path.isfile("error"):
         os.remove("error")
@@ -129,17 +129,20 @@ def DisplayDetails():
 
 
 # Return Number Lines Files
-def NumLines(name_file):
 
-    file = open(f"{name_file}" ,'r') 
-    lines = file.readlines()
+def NumLines(name_file):
+    with open(name_file, 'rb') as file:
+        encoding = chardet.detect(file.read())['encoding']
+    with open(name_file, 'r', encoding=encoding) as file:
+        lines = file.readlines()
 
     return len(lines)
 
 
+
 # The Function guessing
 def Guess(word):
-
+        
         slines = NumLines(word)
         glines = 1
 
@@ -177,7 +180,7 @@ def main():
     else:
         check = massageCheck()
         if check.lower() == "y" or check.lower() == "yes":
-
+            print(f"\n{green}The content of the file is being read ....{nc}")
             if word != None and ext == None:
                 details = f"\n{green}{word}: {blue}{NumLines(word)} Password{nc}\n"
                 displaySlow(details)
@@ -217,6 +220,4 @@ def main():
 
 
 main()
-
-
 
